@@ -1,14 +1,20 @@
 package com.example.demo.dto;
 
-import java.time.*;
-import java.util.*;
+import java.time.LocalDateTime;
+import java.util.Collection;
+import java.util.List;
 
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
-import com.example.demo.entity.*;
+import com.example.demo.entity.Board;
+import com.example.demo.entity.Comment;
 
-import io.swagger.v3.oas.annotations.media.*;
-import lombok.*;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 // 입력용 DTO의 경우 입력값 검증을 수행(Java Validataion)
 // 출력용 DTO의 경우 Swagger를 통해 필드의 역할을 설명하겠다
