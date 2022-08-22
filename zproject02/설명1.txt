@@ -100,8 +100,8 @@
 	  	400(HttpStatus.BAD_REQUEST) : 잘못된 요청 형식으로 서버측에서 거부. logback.xml에서 debug를 지정해야 상황을 볼 수 있다
 	  	401(HttpStatus.UNAUTHORIZED) : 로그인이 필요함
 	  	403(HttpStatus.FORBIDDEN) : 권한 없음
-	  	404(HttpStatus.NOT_FOUND) : url을 찾을 수 없음
-	  	405(HttpStatus.METHOD_NOT_ALLOWED) : 메소드를 처리할 수 없음
+	  	404(HttpStatus.NOT_FOUND) : url을 찾을 수 없음 (Get인대 Post)
+	  	405(HttpStatus.METHOD_NOT_ALLOWED) : 메소드를 처리할 수 없음 (Post인대 Get)
 	  	500(HttpStatus.INTERNAL_SERVER_ERROR) : 콘솔창에 오류 메시지가 출력된다
 	body : 응답 데이터를 담고있다
 	  
