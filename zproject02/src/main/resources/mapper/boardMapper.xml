@@ -48,7 +48,7 @@
  	
   <select id="findById" resultType="com.example.demo.dto.BoardDto$Read">
   <![CDATA[
-  	select * from board where bno=#{bno} and rownum&lt;=1
+  	select * from board where bno=#{bno} and rownum<=1
   ]]>
   </select>
   
