@@ -33,7 +33,7 @@ public class BoardController {
 	@Autowired
 	private BoardService service;
 	
-	//@PreAuthorize("isAuthenticated()")
+	@PreAuthorize("isAuthenticated()")
 	@PostMapping(value="/board/new",produces =MediaType.TEXT_PLAIN_VALUE)
 	@Operation(summary = "5.글 작성",description = "제목과 내용을 입력해 글을 작성")
 	@ApiImplicitParams({
@@ -45,7 +45,7 @@ public class BoardController {
 		@ApiResponse(code = 409,response = String.class,message = "오류 메시지")
 	})
 	public ResponseEntity<String> write(@Valid BoardDto.Write dto, BindingResult bindingResult, @ApiIgnore Principal principal) {
-		Board board = service.write(dto, "spring");
+		Board board = service.write(dto, principal.getName());
 		return ResponseEntity.ok("/board/read?bno="+board.getBno());
 	}
 }
